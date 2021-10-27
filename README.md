@@ -5,7 +5,7 @@ Example of the Soap Web Services tests using [Carina](https://www.carina-core.io
 * Install and configure [Apache Maven 3.5.2+](http://maven.apache.org/)
 * Download and start the latest [Selenium standalone server](http://www.seleniumhq.org/download/)
 * Download the latest version of [Eclipse](http://www.eclipse.org/downloads/) and install [TestNG plugin](http://testng.org/doc/download.html)
-* [Read Carina documentation](http://qaprosoft.github.io/carina)
+* [Read Carina documentation](https://zebrunner.github.io/carina)
 
 ### Import to Eclipse
 If generation is successfully complete, you would see a new project folder with a name equal to the artifactId attribute specified during generation, so navigate to that folder (where pom.xml is located) and execute the following Maven task:
