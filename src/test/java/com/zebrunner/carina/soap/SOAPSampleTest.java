@@ -1,19 +1,18 @@
 package com.zebrunner.carina.soap;
 
-import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
-import com.qaprosoft.carina.core.foundation.utils.tag.Priority;
-import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
-import com.zebrunner.carina.soap.CountryInfoClient;
-import com.zebrunner.carina.soap.CountryInfoConfiguration;
-import com.zebrunner.carina.soap.base.SOAPTest;
-
-import countryinfo.wsdl.CapitalCityResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
+import com.qaprosoft.carina.core.foundation.utils.tag.Priority;
+import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
+import com.zebrunner.carina.soap.base.SOAPTest;
+
+import countryinfo.wsdl.CapitalCityResponse;
 
 /**
  * This sample shows how to create SOAP API tests.
