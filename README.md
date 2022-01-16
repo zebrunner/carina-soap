@@ -1,7 +1,7 @@
 Example of the Soap Web Services tests using [Carina](https://www.carina-core.io) framework.
 
 ### Getting started
-* Install and configure JDK 1.8+
+* Install and configure JDK 11+
 * Install and configure [Apache Maven 3.5.2+](http://maven.apache.org/)
 * Download and start the latest [Selenium standalone server](http://www.seleniumhq.org/download/)
 * Download the latest version of [Eclipse](http://www.eclipse.org/downloads/) and install [TestNG plugin](http://testng.org/doc/download.html)

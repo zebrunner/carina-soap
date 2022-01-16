@@ -1,9 +1,12 @@
-package com.qaprosoft.carina.soap;
+package com.zebrunner.carina.soap;
 
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
 import com.qaprosoft.carina.core.foundation.utils.tag.Priority;
 import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
-import com.qaprosoft.carina.soap.base.SOAPTest;
+import com.zebrunner.carina.soap.CountryInfoClient;
+import com.zebrunner.carina.soap.CountryInfoConfiguration;
+import com.zebrunner.carina.soap.base.SOAPTest;
+
 import countryinfo.wsdl.CapitalCityResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

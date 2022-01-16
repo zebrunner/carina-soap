@@ -2,32 +2,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.qaprosoft</groupId>
+    <groupId>com.zebrunner</groupId>
     <artifactId>carina-soap</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>carina-soap</name>
-    <url>http://qaprosoft.com</url>
+    <url>https://zebrunner.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <carina-core_version>RELEASE</carina-core_version>
-        <java.version>1.8</java.version>
-        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
-        <suite>helloWorld</suite>
+        <java.version>11</java.version>
+        <spring-boot.version>2.6.2</spring-boot.version>
+        <suite>soap</suite>
     </properties>
 
     <repositories>
-        <repository>
-            <id>qaprosoft_snapshots</id>
-            <name>Qaprosoft Snapshots</name>
-            <url>https://ci.qaprosoft.com/nexus/content/repositories/snapshots/</url>
+        <!--repository>
+            <id>zebrunner_snapshots</id>
+            <name>zebrunner Snapshots</name>
+            <url>https://nexus.zebrunner.dev/repository/ce-snapshots/</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
             <snapshots>
+                <enabled>true</enabled>
             </snapshots>
-        </repository>
+        </repository-->
     </repositories>
 
     <dependencies>
@@ -35,11 +36,6 @@
             <groupId>com.qaprosoft</groupId>
             <artifactId>carina-core</artifactId>
             <version>${carina-core_version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -55,7 +51,7 @@
         <dependency>
             <groupId>org.springframework.ws</groupId>
             <artifactId>spring-ws-core</artifactId>
-            <version>3.0.8.RELEASE</version>
+            <version>3.1.2</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -68,6 +64,38 @@
                 </exclusion>
             </exclusions>
         </dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-beans</artifactId>
+    <version>5.3.15</version>
+</dependency>
+<!--dependency>
+    <groupId>javax.xml.soap</groupId>
+    <artifactId>javax.xml.soap-api</artifactId>
+    <version>1.4.0</version>
+</dependency-->
+<dependency>
+    <groupId>com.sun.xml.messaging.saaj</groupId>
+    <artifactId>saaj-impl</artifactId>
+    <!--version>1.5.1</version-->
+    <version>1.5.3</version>
+</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.30</version>
+		</dependency>
+		<!-- Log4j2 -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.17.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.17.1</version>
+		</dependency>
     </dependencies>
 
     <build>
@@ -77,28 +105,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <release>${java.version}</release>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.4</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>report</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -114,7 +122,7 @@
             <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.11.0</version>
+                <version>0.14.0</version>
                 <executions>
                     <execution>
                         <goals>

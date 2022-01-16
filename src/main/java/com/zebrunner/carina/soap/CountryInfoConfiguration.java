@@ -1,4 +1,4 @@
-package com.qaprosoft.carina.soap;
+package com.zebrunner.carina.soap;
 
 import com.qaprosoft.carina.core.foundation.utils.R;
 import org.springframework.context.annotation.Bean;

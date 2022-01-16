@@ -1,4 +1,4 @@
-package com.qaprosoft.carina.soap.base;
+package com.zebrunner.carina.soap.base;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
 import org.springframework.context.ApplicationContext;
