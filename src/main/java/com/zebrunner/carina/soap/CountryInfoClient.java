@@ -1,16 +1,14 @@
 package com.zebrunner.carina.soap;
 
-import com.qaprosoft.carina.core.foundation.utils.R;
+import com.zebrunner.carina.utils.R;
 import countryinfo.wsdl.CapitalCity;
 import countryinfo.wsdl.CapitalCityResponse;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.client.core.SoapActionCallback;
 
+@Slf4j
 public class CountryInfoClient extends WebServiceGatewaySupport {
-
-    private static final Logger log = LoggerFactory.getLogger(CountryInfoClient.class);
 
     public CapitalCityResponse getCapitalCityResponse(String isoCode) {
         CapitalCity capitalCity = new CapitalCity();
