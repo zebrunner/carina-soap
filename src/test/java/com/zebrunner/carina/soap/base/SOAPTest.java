@@ -1,6 +1,6 @@
 package com.zebrunner.carina.soap.base;
 
-import com.qaprosoft.carina.core.foundation.AbstractTest;
+import com.zebrunner.carina.core.AbstractTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.lang.Nullable;
@@ -28,12 +28,10 @@ public class SOAPTest extends AbstractTest implements IHookable, ApplicationCont
      * The {@link ApplicationContext} that was injected into this test instance
      * via {@link #setApplicationContext(ApplicationContext)}.
      */
-    @Nullable
     protected ApplicationContext applicationContext;
 
     private final TestContextManager testContextManager;
 
-    @Nullable
     private Throwable testException;
 
     /**
